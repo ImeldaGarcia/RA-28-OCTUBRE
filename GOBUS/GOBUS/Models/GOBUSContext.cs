@@ -15,10 +15,12 @@ namespace GOBUS.Models
            
         }
 
+
         public DbSet <Citas> Citas { get; set; }
         public DbSet <Servicios> Servicios { get; set; }
         public DbSet <Sucursales> Sucursales { get; set; }
         public DbSet <Clientes> Clientes { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
