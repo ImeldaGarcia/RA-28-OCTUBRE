@@ -18,7 +18,6 @@ namespace GOBUS.Models
         public String PlacaNumero { get; set; }
 
         [Required(ErrorMessage = "Ingrese el campo FechaCita")]
-        [StringLength(8, ErrorMessage = ("La cantidad maxima de caracteres es de 8"))]
         public DateTime FechaCita { get; set; }
 
         [ForeignKey ("Clientes")]
