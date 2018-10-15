@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GOBUS.Models
 {
-    public class Sucursales
+    public class Sucursale
     {
         [Key]
         [Required(ErrorMessage = "Ingrese el campo Id")]
@@ -28,6 +28,6 @@ namespace GOBUS.Models
         [StringLength(50, ErrorMessage = ("La cantidad maxima de caracteres es de 50"))]
         public String Encargado { get; set; }
 
-        public virtual ICollection <Citas> Citas { get; set; }
+        public virtual ICollection <Cita> Citas { get; set; }
     }
 }

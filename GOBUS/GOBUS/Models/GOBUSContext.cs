@@ -12,14 +12,14 @@ namespace GOBUS.Models
     {
         public GOBUSContext() : base("GOBUSContext")
         {
-           
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<GOBUSContext, GOBUS.Migrations.Configuration>());
         }
 
 
-        public DbSet <Citas> Citas { get; set; }
-        public DbSet <Servicios> Servicios { get; set; }
-        public DbSet <Sucursales> Sucursales { get; set; }
-        public DbSet <Clientes> Clientes { get; set; }
+        public DbSet <Cita> Citas { get; set; }
+        public DbSet <Servicio> Servicios { get; set; }
+        public DbSet <Sucursale> Sucursales { get; set; }
+        public DbSet <Cliente> Clientes { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace GOBUS.Models
 {
-    public class Citas
+    public class Cita
     {
         [Key]
         [Required (ErrorMessage = "Ingrese el campo Id")]
@@ -23,11 +23,11 @@ namespace GOBUS.Models
         [ForeignKey ("Clientes")]
         [Required(ErrorMessage = "Ingrese el campo IdCliente")]
         public int IdCliente { get; set; }
-        public Clientes Clientes { get; set; }
+        public Cliente Clientes { get; set; }
 
         [ForeignKey ("Sucursales")]
         [Required(ErrorMessage = "Ingrese el campo IdSucursal")]
         public int IdSucursal { get; set; }
-        public Sucursales Sucursales { get; set; }
+        public Sucursale Sucursales { get; set; }
     }
 }

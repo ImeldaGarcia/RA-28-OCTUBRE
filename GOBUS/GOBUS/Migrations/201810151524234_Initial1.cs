@@ -3,12 +3,12 @@ namespace GOBUS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class Initial1 : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Citas",
+                "dbo.Cita",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -18,13 +18,13 @@ namespace GOBUS.Migrations
                         IdSucursal = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Clientes", t => t.IdCliente, cascadeDelete: true)
-                .ForeignKey("dbo.Sucursales", t => t.IdSucursal, cascadeDelete: true)
+                .ForeignKey("dbo.Cliente", t => t.IdCliente, cascadeDelete: true)
+                .ForeignKey("dbo.Sucursale", t => t.IdSucursal, cascadeDelete: true)
                 .Index(t => t.IdCliente)
                 .Index(t => t.IdSucursal);
             
             CreateTable(
-                "dbo.Clientes",
+                "dbo.Cliente",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -37,7 +37,7 @@ namespace GOBUS.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Sucursales",
+                "dbo.Sucursale",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -49,7 +49,7 @@ namespace GOBUS.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Servicios",
+                "dbo.Servicio",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -63,14 +63,14 @@ namespace GOBUS.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Citas", "IdSucursal", "dbo.Sucursales");
-            DropForeignKey("dbo.Citas", "IdCliente", "dbo.Clientes");
-            DropIndex("dbo.Citas", new[] { "IdSucursal" });
-            DropIndex("dbo.Citas", new[] { "IdCliente" });
-            DropTable("dbo.Servicios");
-            DropTable("dbo.Sucursales");
-            DropTable("dbo.Clientes");
-            DropTable("dbo.Citas");
+            DropForeignKey("dbo.Cita", "IdSucursal", "dbo.Sucursale");
+            DropForeignKey("dbo.Cita", "IdCliente", "dbo.Cliente");
+            DropIndex("dbo.Cita", new[] { "IdSucursal" });
+            DropIndex("dbo.Cita", new[] { "IdCliente" });
+            DropTable("dbo.Servicio");
+            DropTable("dbo.Sucursale");
+            DropTable("dbo.Cliente");
+            DropTable("dbo.Cita");
         }
     }
 }

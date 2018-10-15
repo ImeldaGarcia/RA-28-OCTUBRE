@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GOBUS.Models
 {
-    public class Servicios
+    public class Servicio
     {
         [Key]
         [Required(ErrorMessage = "Ingrese el campo Id")]
@@ -20,7 +20,7 @@ namespace GOBUS.Models
         [StringLength(100, ErrorMessage = ("La cantidad maxima de caracteres es de 100"))]
         public String Descripcion { get; set; }
 
-        [Required(ErrorMessage = "Ingrese el campo Costo")]
+        [Required (ErrorMessage = "Ingrese el campo Costo")]
         public Double Costo { get; set; }
     }
 }

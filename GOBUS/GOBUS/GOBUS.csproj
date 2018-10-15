@@ -163,17 +163,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810151414018_Initial.cs" />
-    <Compile Include="Migrations\201810151414018_Initial.Designer.cs">
-      <DependentUpon>201810151414018_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201810151524234_Initial1.cs" />
+    <Compile Include="Migrations\201810151524234_Initial1.Designer.cs">
+      <DependentUpon>201810151524234_Initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Citas.cs" />
-    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Cita.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\GOBUSContext.cs" />
     <Compile Include="Models\GOBUSDbInitializer.cs" />
-    <Compile Include="Models\Servicios.cs" />
-    <Compile Include="Models\Sucursales.cs" />
+    <Compile Include="Models\Servicio.cs" />
+    <Compile Include="Models\Sucursale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,8 +233,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810151414018_Initial.resx">
-      <DependentUpon>201810151414018_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810151524234_Initial1.resx">
+      <DependentUpon>201810151524234_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,6 +10,8 @@ namespace GOBUS.Controllers
     {
         public ActionResult Index()
         {
+            Models.GOBUSContext dbCtx = new Models.GOBUSContext();
+            new Models.GOBUSDbInitializer().InitializeDatabase(dbCtx);
             return View();
         }
 

@@ -12,25 +12,28 @@ namespace GOBUS.Models
         protected override void Seed(GOBUSContext dbCtx)
         {
             #region Servicios
-            List<Servicios> servicio = new List<Servicios>();
-            servicio.Add(new Servicios()
+            List<Servicio> servicios = new List<Servicio>();
+            servicios.Add(new Servicio()
             {
                 NombreServicio = "Cambio de aceite",
                 Descripcion = "Se necesita cambiar el aceite al carro",
                 Costo = 150.90
             });
 
-            servicio.Add(new Servicios()
+            servicios.Add(new Servicio()
             {
                 NombreServicio = "Cambio de balatas",
                 Descripcion = "Se neceita urgente un cambio de balatas al carro",
                 Costo = 56.70
             });
+
+            dbCtx.Servicios.AddRange(servicios);
+            dbCtx.SaveChanges();
             #endregion
 
             #region Clientes
-            List<Clientes> cliente = new List<Clientes>();
-            cliente.Add(new Clientes()
+            List<Cliente> clientes = new List<Cliente>();
+            clientes.Add(new Cliente()
             {
                 Nombre = "Abdeel Esau",
                 Apellidos = "Martinez Moreno",
@@ -40,7 +43,7 @@ namespace GOBUS.Models
 
             });
 
-            cliente.Add(new Clientes()
+            clientes.Add(new Cliente()
             {
                 Nombre = "Imelda Abigail",
                 Apellidos = "Garcia Segovia",
@@ -48,11 +51,14 @@ namespace GOBUS.Models
                 Telefono = "8291025071",
                 Email = "imeldasegovia1@gmail.com"
             });
+
+            dbCtx.Clientes.AddRange(clientes);
+            dbCtx.SaveChanges();
             #endregion
 
             #region Surcursales
-            List<Sucursales> sucursale = new List<Sucursales>();
-            sucursale.Add(new Sucursales()
+            List<Sucursale> sucursales = new List<Sucursale>();
+            sucursales.Add(new Sucursale()
             {
                 Nombre = "AutoZone",
                 Direcion = "Aaron Villarreal #220 Col. Miguel Hidalgo",
@@ -60,22 +66,34 @@ namespace GOBUS.Models
                 Encargado = "Sarahi Erasto"
             });
 
-            sucursale.Add(new Sucursales()
+            sucursales.Add(new Sucursale()
             {
                 Nombre = "Valentines",
                 Direcion = "San Antonio #100 Col. San Martin",
                 Telefono = "8292860516",
                 Encargado = "Samuel Arriaga"
             });
+
+            dbCtx.Sucursales.AddRange(sucursales);
+            dbCtx.SaveChanges();
             #endregion
 
             #region Citas
-            List<Citas> cita = new List<Citas>();
-            cita.Add(new Citas()
+            List<Cita> citas = new List<Cita>();
+            citas.Add(new Cita()
             {
                 PlacaNumero = "ABCDE12345",
                 FechaCita = DateTime.Now
             });
+
+            citas.Add(new Cita()
+            {
+                PlacaNumero = "QRSTU54321",
+                FechaCita = DateTime.Now
+            });
+
+            dbCtx.Citas.AddRange(citas);
+            dbCtx.SaveChanges();
             #endregion
         }
 
