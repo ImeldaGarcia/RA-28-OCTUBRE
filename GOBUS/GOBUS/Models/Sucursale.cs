@@ -28,6 +28,6 @@ namespace GOBUS.Models
         [StringLength(50, ErrorMessage = ("La cantidad maxima de caracteres es de 50"))]
         public String Encargado { get; set; }
 
-        public virtual ICollection <Cita> Citas { get; set; }
+        public virtual ICollection<Cita> Citas { get; set; }
     }
 }

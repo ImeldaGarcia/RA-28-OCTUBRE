@@ -10,22 +10,22 @@ namespace GOBUS.Models
     public class Cita
     {
         [Key]
-        [Required (ErrorMessage = "Ingrese el campo Id")]
+        [Required(ErrorMessage = "Ingrese el campo Id")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Ingrese el campo PlacaNumero")]
-        [StringLength (10, ErrorMessage = ("La cantidad maxima de caracteres es de 10"))]
+        [StringLength(10, ErrorMessage = ("La cantidad maxima de caracteres es de 10"))]
         public String PlacaNumero { get; set; }
 
         [Required(ErrorMessage = "Ingrese el campo FechaCita")]
         public DateTime FechaCita { get; set; }
 
-        [ForeignKey ("Clientes")]
+        [ForeignKey("Clientes")]
         [Required(ErrorMessage = "Ingrese el campo IdCliente")]
         public int IdCliente { get; set; }
         public Cliente Clientes { get; set; }
 
-        [ForeignKey ("Sucursales")]
+        [ForeignKey("Sucursales")]
         [Required(ErrorMessage = "Ingrese el campo IdSucursal")]
         public int IdSucursal { get; set; }
         public Sucursale Sucursales { get; set; }

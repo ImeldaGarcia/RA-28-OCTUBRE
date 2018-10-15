@@ -9,7 +9,7 @@ namespace GOBUS.Models
     public class Cliente
     {
         [Key]
-        [Required (ErrorMessage = "Ingrese el campo Id")]
+        [Required(ErrorMessage = "Ingrese el campo Id")]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Ingrese el campo  Nombre")]
@@ -32,7 +32,6 @@ namespace GOBUS.Models
         [StringLength(20, ErrorMessage = ("La cantidad maxima de caracteres es de 20"))]
         public String Email { get; set; }
 
-        public virtual ICollection <Cita> Citas { get; set; }
-
+        public virtual ICollection<Cita> Citas { get; set; }
     }
 }
