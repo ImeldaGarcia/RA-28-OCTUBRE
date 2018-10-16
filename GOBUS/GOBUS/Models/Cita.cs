@@ -20,14 +20,14 @@ namespace GOBUS.Models
         [Required(ErrorMessage = "Ingrese el campo FechaCita")]
         public DateTime FechaCita { get; set; }
 
-        [ForeignKey("Clientes")]
+        [ForeignKey("Cliente")]
         [Required(ErrorMessage = "Ingrese el campo IdCliente")]
         public int IdCliente { get; set; }
-        public Cliente Clientes { get; set; }
+        public Cliente Cliente { get; set; }
 
-        [ForeignKey("Sucursales")]
+        [ForeignKey("Sucursale")]
         [Required(ErrorMessage = "Ingrese el campo IdSucursal")]
         public int IdSucursal { get; set; }
-        public Sucursale Sucursales { get; set; }
+        public Sucursale Sucursale { get; set; }
     }
 }

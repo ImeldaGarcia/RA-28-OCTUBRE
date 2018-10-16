@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A7B715E6-08B4-4D69-886F-7BF6875CF6C0}</ProjectGuid>
+    <ProjectGuid>{65BE55A6-3B2B-4F28-B218-C4563D060C7A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -163,15 +163,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810151524234_Initial1.cs" />
-    <Compile Include="Migrations\201810151524234_Initial1.Designer.cs">
-      <DependentUpon>201810151524234_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cita.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\GOBUSContext.cs" />
-    <Compile Include="Models\GOBUSDbInitializer.cs" />
     <Compile Include="Models\Servicio.cs" />
     <Compile Include="Models\Sucursale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,11 +226,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810151524234_Initial1.resx">
-      <DependentUpon>201810151524234_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -253,9 +242,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>6929</DevelopmentServerPort>
+          <DevelopmentServerPort>19773</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6929/</IISUrl>
+          <IISUrl>http://localhost:19773/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
