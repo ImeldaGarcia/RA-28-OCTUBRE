@@ -14,7 +14,7 @@ namespace GOBUS.Models
             public GOBUSContext() : base("GOBUSContext")
             {
               //Database.SetInitializer(new MigrateDatabaseToLatestVersion<GOBUSContext, GOBUS.Migrations.Configuration>());
-                Database.SetInitializer<GOBUSContext>(new GOBUSDbInitializer());
+               // Database.SetInitializer<GOBUSContext>(new GOBUSDbInitializer());
             }
 
 
