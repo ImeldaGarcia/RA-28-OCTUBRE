@@ -3,7 +3,7 @@ namespace GOBUS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial1 : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
